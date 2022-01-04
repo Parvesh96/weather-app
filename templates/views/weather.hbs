@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Weather</title>
+</head>
+<body>
+    {{>header}}
+    <div>
+        <p>
+            Use This Page to Interact With Weather
+        </p>
+        <br>
+        <div>
+            <div class="alert alert-danger" style="display: none;" id="form_error" role="alert">
+                This is a primary alert—check it out!
+            </div>
+        </div>
+        <div>
+            <form>
+                <input type="text" class="form-control" name="" id="location" placeholder="Enter Location">
+                <button type="submit" class="btn btn-outline-success">Fetch</button>
+                <br>
+                <span class="invalid-feedback" id="location_error"></span>
+            </form>
+        </div>
+        <br>
+        <div id="success_message"></div>
+    </div>
+    {{>footer}}
+    <script src="/js/custom.js"></script>
+</body>
+</html>
